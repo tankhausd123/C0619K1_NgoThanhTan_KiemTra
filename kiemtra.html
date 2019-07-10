@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai1</title>
+</head>
+<body>
+<script>
+    function isPrime() {
+        let z = true;
+        let num= parseInt(prompt("Nhap so can kiem tra: "));
+        if (num <2){
+            z=false;
+        }
+        else for (i = 2; i < (num-1); i++) {
+            if (num%i == 0){
+                z= false;
+
+            }
+
+        }return z
+
+    }alert(isPrime())
+</script>
+</body>
+</html>
