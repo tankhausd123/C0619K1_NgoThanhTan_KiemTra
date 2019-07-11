@@ -6,21 +6,22 @@
 </head>
 <body>
 <script>
-    function isPrime() {
-        let z = true;
-        let num= parseInt(prompt("Nhap so can kiem tra: "));
+    let number= parseInt(prompt("Nhap so can kiem tra: "));
+    function isPrime(num) {
+        let checkprime = true;
+        
         if (num <2){
-            z=false;
+            checkprime=false;
         }
         else for (i = 2; i < (num-1); i++) {
             if (num%i == 0){
-                z= false;
+                checkprime= false;
 
             }
 
-        }return z
+        }return checkprime;
 
-    }alert(isPrime())
+    }alert(isPrime(number))
 </script>
 </body>
 </html>
