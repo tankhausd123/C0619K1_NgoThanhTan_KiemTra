@@ -2,25 +2,37 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Bai2</title>
 </head>
 <body>
 <script>
-    function listPrimes() {
-        let a= [5,3,5,7,9];
-        let b= [];
-        for (i=0; i<a.length;i++){
-            if (a[i]>=2) {
-                for(j=2; j<(a[i]-1);j++){
-                    if (a[i]%j ==0) {
-
-                    }else b[i];
-                }
-
-            }
-        }
-     return console.log(b[i])
+let array = [10,5,2,8,7,13];
+let result = listPrime(array);
+function isPrime(num) {
+    let checkprime = true;
+    if (num < 2) {
+        checkprime = false;
     }
+    for (let i = 2; i <num-1; i++) {
+        if (num % i == 0) {
+            checkprime = false;
+            break;
+        } else 
+            checkprime = true;
+    }
+    return checkprime;
+}
+function listPrime(arr) {
+    let arrNew = [];
+    for (let i = 0; i < arr.length; i++) {
+        if (isPrime(arr[i]) == true) {
+            arrNew.push(arr[i]);
+        }
+    }
+    return arrNew;
+
+}
+document.write(result);
 </script>
 </body>
 </html>
